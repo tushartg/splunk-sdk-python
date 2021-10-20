@@ -165,7 +165,7 @@ class CustomStreamingCommand(StreamingCommand):
     def stream(self, records):
         for index, record in enumerate(records):
             if index % 1 == 0:
-                self.add_field(record, "odd_record", "true")
+                record = self.add_field(record, "odd_record", "true")
             yield record
 ```
 
